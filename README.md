@@ -2,7 +2,8 @@
 
 [![Build Status](@TODO)
 [![Coverage]()]()
-[![License](https://github.com/amcajal/gsvmind/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/amcajal/gsvmind.svg)](https://github.com/amcajal/gsvmind/blob/master/LICENSE)
+
 
 <!--- PROJECT SUMMARY/OVERVIEW -->
 Did you hear about [Space X's drone ships called _Of Course I Still Love You_ and _Just Read the Instructions_?](https://www.space.com/28445-spacex-elon-musk-drone-ships-names.html)
