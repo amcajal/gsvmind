@@ -50,7 +50,7 @@ More information at the [Wiki of the project](@TODO).
 
 * Clone repo to local computer and go to main directory:
 
-    `$ git clone https://gsvmind`
+    `$ git clone https://github.com/amcajal/gsvmind.git`
     
     `$ cd <clone_dir>/gsvmind`
     
