@@ -1,2 +1,155 @@
-# gsvmind
-Random generator of GSV names, in honor to "The Culture" series by Ian M. Banks!
+<!--- PROJECT LOGO -->
+![project_logo](@TODO url to image)
+
+<!--- BADGES AND SHIELDS -->
+Include all required badges. Recommended are: Build, Coverage and License.
+Use https://shields.io/
+
+[![Build Status](https://travis-ci.org/AlbertoMartinCajal/miscellaneous_test.svg?branch=master)](https://travis-ci.org/AlbertoMartinCajal/miscellaneous_test)
+[![Coverage]()]()
+[![License](https://img.shields.io/github/license/elraro/EmailFinder.svg)](@REP URL to license file in branch master. i.e: https://github.com/myUser/project/blob/master/LICENSE.txt)
+
+<!--- PROJECT SUMMARY/OVERVIEW -->
+Did you hear about [Space X's drone ships called _Of Course I Still Love You_ and _Just Read the Instructions_?](https://www.space.com/28445-spacex-elon-musk-drone-ships-names.html)
+Their names are a tribute to
+[_The Culture_ books series by Ian M. Banks](https://en.wikipedia.org/wiki/The_Culture), 
+a sci-fiction saga where one of the main attractions are the **General System Vehicles**
+(or **GSV**): enormous self-conscious spaceships that choose their own names - cool, funny and creepy at equal parts.
+
+GSVmind (* wink wink *) generates random names similar to those of the books. You can use them to name your drone, arduino robot,
+microwave, laundry machine or whatever you want.
+
+GSVmind is a python application that uses as its core the [Requests library](http://docs.python-requests.org/en/master/), 
+[BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) 
+and [TextBlob](https://textblob.readthedocs.io/en/dev/) 
+to extract from Internet the text data 
+required to generate the random names - specifically from [Wikipedia, through its awesome service of _Get a random article_](https://en.wikipedia.org/wiki/Special:Random). 
+(Kindly consider [donate](https://donate.wikimedia.org/wiki/Ways_to_Give?rdfrom=%2F%2Ffoundation.wikimedia.org%2Fw%2Findex.php%3Ftitle%3DWays_to_Give%2Fen%26redirect%3Dno)
+ to one of the best websites in the world).
+
+Besides its funny purpose, GSVmind is an state-of-the-art/sandbox project, where several Principles, Patters and Principles (also known
+as P.P.P) has been tried or exercised as a learning process. Some of them are: 
+- Test Driven Development
+- Requirements Development
+- Code Coverage
+- Clean Code (readability, modularity, meaningfull comments...)
+
+More information at the [Wiki of the project](@TODO).
+
+---
+
+## Index
+1. [Quickstart](#quickstart)
+2. [Contributions](#contributions)
+3. [License](#license)
+4. [Contact](#contact)
+
+---
+
+### Quickstart
+
+* Clone repo to local computer and go to main directory:
+
+    `$ git clone https://gsvmind`
+    
+    `$ cd <clone_dir>/gsvmind`
+    
+* Run _setup.sh_ script. If dependencies are not satisfied, you can
+run _gsvmind_install_dep.sh_:
+
+    `$ sh setup.sh`
+    
+    `$ cd /project/def/sw/scripts`
+    
+    `$ sudo sh gsvmind_install_dep.sh`
+    
+* If _setup.sh_ finished sucessfully, you can launch now GSVmind!:
+
+    `$ python gsvmind.py`
+    
+Example output:
+```
+ .d8888b.   .d8888b.  888     888               d8b               888
+d88P  Y88b d88P  Y88b 888     888               Y8P               888
+888    888 Y88b.      888     888                                 888
+888         "Y888b.   Y88b   d88P 88888b.d88b.  888 88888b.   .d88888
+888  88888     "Y88b.  Y88b d88P  888 "888 "88b 888 888 "88b d88" 888
+888    888       "888   Y88o88P   888  888  888 888 888  888 888  888
+Y88b  d88P Y88b  d88P    Y888P    888  888  888 888 888  888 Y88b 888
+ "Y8888P88  "Y8888P"      Y8P     888  888  888 888 888  888  "Y88888
+
+GSV operative! It decided to name itself:"Skaffen-Amtiskaw the best"
+```
+
+And of course, take a look to the generated log:
+```
+GSVNAME log
+RANDOM_WIKI_URL:https://boraHorzaGobuchul.com
+GEN_METHOD:SENTENCES
+GSVNAME:Skaffen-Amtiskaw the best
+```
+    
+* To launch tests individually:
+
+    `$ cd /project/def/sw/tests/`
+    
+    `$ python <name_of_test_file>.py`
+
+[Back to index](#index)
+
+
+### License
+
+Alberto Martin Cajal is the original author of **GSVmind** project.
+**GSVmind** project is released under GNU GPL version 3.0 license. 
+[Check LICENSE file](https://github.com/amcajal/gsvmind/blob/master/LICENSE) 
+for a full version of it, or 
+[visit the official GNU web page](https://www.gnu.org/licenses/gpl-3.0.html).
+
+[Back to index](#index)
+
+
+
+### Contributions
+
+<!--- MANY OF THIS ADVICES CAN BE PUT ON THE CONTRIB DIR, INSTEAD ON THE README -->
+Almost all contributions guidelines will contain a section in the wiki, under STANDARDS. It will contain standards about:
+writting issues, adding new source files, moddifying existing ones, adding new requirements, new desings, etc.
+
+clone dir
+create requirements
+then write tests, it shall pass
+then write code, it shall work
+follow the templates and overall code style (tags to reqs, etc)
+try to keep code coverage high, or justify any holes
+start a pull request
+
+open an issue using the available templates
+
+be kind to any person@TODO
+* Writing tests
+* Code review
+* Other guidelines
+* Reference to contrib file
+* Reference to code of conduct
+* Reference to issue template
+
+[Back to index](#index)
+
+
+### Contact
+Alberto Martin Cajal at:
+ 
+- Gmail: amartin.glimpse23@gmail.com (amartin DOT glimpse23 AT gmail DOT com)
+- [Blogspot](http://glimpse-23.blogspot.com.es/)
+- [LinkedIn](https://es.linkedin.com/in/alberto-martin-cajal-b0a63379)
+- Twitter: @amartin_g23
+
+[Back to index](#index)
+
+---
+
+#### This project has been created trying to make it usefull. This project has been created in order to learn new things. But over all, this project has been created because it is fun. As Isaac Asimov said:
+
+*The most exciting phrase to hear in science, the one that heralds new discoveries, is not 'Eureka' but 'That's funny...'*
+
