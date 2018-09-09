@@ -1,13 +1,8 @@
-<!--- PROJECT LOGO -->
-![project_logo](@TODO url to image)
+![project_logo](https://github.com/amcajal/gsvmind/blob/master/project/definitive/sw/doc/media/gsvmind_logo.png)
 
-<!--- BADGES AND SHIELDS -->
-Include all required badges. Recommended are: Build, Coverage and License.
-Use https://shields.io/
-
-[![Build Status](https://travis-ci.org/AlbertoMartinCajal/miscellaneous_test.svg?branch=master)](https://travis-ci.org/AlbertoMartinCajal/miscellaneous_test)
+[![Build Status](@TODO)
 [![Coverage]()]()
-[![License](https://img.shields.io/github/license/elraro/EmailFinder.svg)](@REP URL to license file in branch master. i.e: https://github.com/myUser/project/blob/master/LICENSE.txt)
+[![License](https://github.com/amcajal/gsvmind/blob/master/LICENSE)
 
 <!--- PROJECT SUMMARY/OVERVIEW -->
 Did you hear about [Space X's drone ships called _Of Course I Still Love You_ and _Just Read the Instructions_?](https://www.space.com/28445-spacex-elon-musk-drone-ships-names.html)
