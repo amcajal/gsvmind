@@ -1,0 +1,1034 @@
+SOFTWARE REQUIREMENTS PROCESS FROM GSVMIND PROJECT
+=================================================
+
+Note: A full requirement process would involve capturing the user requirements or mission requirements, then develop the system
+requirements, then sort them into sets of subsystems requirements, and for each set of subsystem requirements, allocate them
+to either software or hardware. Once allocated (in the case of software), develop the high level requirements, then the
+low level requirements, and in the previous two phases, develop the derived requirements, if any.
+
+Due to the scope of the project, its non-sense to pursue all this steps. The requirements process is reduced
+to capture the user requirements, then develop the high level requirements, then develop the low level requirements,
+and when required, develop derived requirements.
+
+-----------------------------------------------------------------------------------
+USER REQUIREMENTS
+-----------------------------------------------------------------------------------
+Unique_ID:
+	UR_001
+Req_Text:
+	The application shall generate as output:
+		- English phrases with full meaning
+		- Maximum of 5 words length
+		- Choosen or generated randomly 
+Req_Rationale:
+	The output shall be similar to the name sof the GSV ships in the Culture series by Ian M. Banks
+Notes:
+	N/A
+Req_Level:
+	User_Requirement
+Is_Derived:
+	No
+		
+
+Unique_ID:
+	UR_002
+Req_Text:
+	The application shall be named GSVMind
+Req_Rationale:
+	The name of the application is a tribute to the Culture series by Ian M. Banks
+Notes:
+	N/A
+Req_Level:
+	User_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	UR_003
+Req_Text:
+	The application shall be released under License GNU GPL v3.0
+Req_Rationale:
+	N/A
+Notes:
+	License GNU GPL v3.0, as it is at 02/August/2018
+Req_Level:
+	User_requirement
+Is_Derived:
+	No
+
+
+-----------------------------------------------------------------------------------
+HIGH LEVEL REQUIREMENTS
+-----------------------------------------------------------------------------------
+Unique_ID:
+	HLR_001
+Req_Text:
+	The application shall provide feedback about its state, so the user shall be capable
+	of determine if the application:
+		- Has started its operations
+		- Still running
+		- Has stopped or halted (due to controlled or unexpected errors)
+		- Has finished its operations
+Req_Rationale:
+	From the prototype phase, its clear than application operations can take a significant
+	amount of time (maybe 30 secs?). Is necessary then to provide a feedback mechanism to
+	communicate the user the status of the application, so in case something goes wrong
+	or takes more time than usual, the user can take corrective actions.
+Notes:
+	N/A
+Req_Level:
+	High_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	HLR_002
+Req_Text:
+	The application shall log all critical steps in its operations (including configuration parameters,
+	if any) to allow the user to reproduce the very same execution and result. This log shall be generated
+	as an output too, besides the goals established in the user_requirements.
+Req_Rationale:
+	Either for debugging process or repeat capabilities, its a good idea to keep (and save) a log containing
+	all critical steps or configurations parameters.
+Notes:
+	Further requirements will determine what data must be stored in the log. @TODO
+	See UR_001
+Req_Level:
+	High_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	HLR_003
+Req_Text:
+	The appplication shall use data from the Internet as its source to generate its output. 
+Req_Rationale:
+	No local data can be used to generate the text output. All data shall be retrieved from
+	the internet, because this will make the output pseudo-random and virtually unlimited
+	(using local data, even in great amounts, will yield a fixed number of possibilities, small
+	in comparisson to those possible from internet).
+Notes:
+	See UR_001
+Req_Level:
+	High_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	HLR_004
+Req_Text:
+	The application shall be called from a python file called "gsvmind.py"
+Req_Rationale:
+	The name of the main python file (entry point) shall be established to meet
+	the user requirements.
+Notes:
+	N/A
+Req_Level:
+	High_level_requirement
+Is_Derived:
+	Yes
+
+
+Unique_ID:
+	HLR_006
+Req_Text:
+	The application shall be able to parse the following command line parameters
+	(brackets means optional parameters):
+		<application_name> [options]
+	Options are:
+		-h
+		--help		Print help message and then exit
+
+		-v
+		--version	Print version information and then exit 
+Req_Rationale:
+	Command line parameters shall be established, as they affect the functionality
+	of the application. Chosen parameters are the minimal ones recommended by standards
+	like the GNU coding standards.
+Notes:
+	See HLR_004
+Req_Level:
+	High_level_requirement
+Is_Derived:
+	No
+
+-----------------------------------------------------------------------------------
+LOW LEVEL REQUIREMENTS
+-----------------------------------------------------------------------------------
+Unique_ID:
+	LLR_040
+Req_Text:
+	The application shall provide a HELP message with the following content:
+	(See Rationale)
+Req_Rationale:
+	Define the HELP message format. This requirement is derived because it
+	is imposed by the help message format provided by Python module argparser.
+Notes:
+	See HLR_006
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	Yes
+
+
+Unique_ID:
+	LLR_041
+Req_Text:
+	The application shall provide a VERSION message with the following content
+	(each line shall be printed in a different line in the screen):
+		<application_name>
+		<application_version>
+		<application_description>
+		<application_license_and_copyright>
+		<application_contact_and_url>
+
+	The value of each field is:
+		<application_name> GSVMind
+		<application_version> Version 1.0.0
+		<application_description> Generate random GSV names (like the ones from Culture series of Ian M Banks!)
+		<application_license> 
+			Copyright (C) 2018 Alberto Martin Cajal
+			Application released under license GNU GPL v3.0
+			This is free software; see the source for copying conditions.
+			There is NO warranty; not even for MERCHANTABILITYor FITNESS FOR A PARTICULAR PURPOSE.
+
+		<application_contact_and_url>
+			Project hosted at: https://github.com/amcajal/gsvmind
+			Contact: Alberto Martin Cajal, amartin.glimpse23<AT>gmail.com
+
+
+Req_Rationale:
+	This requirement defines the VERSION message format. The requirement could be divided
+	in several ones, each one specifying the value of one of the fields. However, to reduce
+	the number of requirements and make this one easy to handle, all data is comprissed here.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_042
+Req_Text:
+	The application shall be composed of the following modules:
+		- gsv_web_scrapper: In charge of request HTML pages from internet in a random fashion,
+			and process them to obtain the text data to be used by the gsv_nlp module.
+		- gsv_nlp: In charge of process its input test data to generate random English phrases
+			as established in the user requirements.
+		- gsv_feedback: In charge of print an "ascii art" message in scheen with feedback purposes.
+		- gsv_error_handler: In charge of printing error messages, finishing execution and performin shutdown
+			operations when required.
+Req_Rationale:
+	Once prototype phase is completed, this division is chosen to achieve the goals of modularity, isolation,
+	low coupling, high cohesion, clear interfaces and testability.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_043
+Req_Text:
+	The application shall perform the following algorithm:
+		(User commands the application to run)
+		- Parse arguments
+		- Obtain text data to the processed from internet (gsv_web_scrapper)
+		- Fed text data to gsv_nlp module
+		- Process data and generates the gsv_name (english phrase)
+		- Print gsv_name on the screen
+		- Exit application
+Req_Rationale:
+	Main operations and its order shall be established.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_045
+Req_Text:
+	The application shall configure the logging functionality AFTER the argument parsing,
+	and BEFORE obtain text data to be processed form internet.
+Req_Rationale:
+	Logging module of Python has an specific functionality. Its configuration shall be performed
+	before starting to log data, so this operation is carried in the main module. Because this
+	requirements depends on the chosen design solution, it is derived.
+Notes:
+	See LLR_027 and LLR_029 for configuration details.
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	Yes
+
+
+Unique_ID:
+	LLR_044
+Req_Text:
+	The application shall print the generated gsv_name with the following format
+	(the line STARTS AND FINISH with a NEW LINE character):
+		GSV operative! It decided to name itself:"<gsv_name>"
+
+	being <gsv_name> the output produced by gsv_nlp module with the first letter of each word
+	in UPPERCASE.
+
+Req_Rationale:
+	To differentiate application output from other screen characters, a specific format
+	is defined. The generated english phrase is then printed with such format to make
+	it easy to recognize it.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+----------- TITLE -------------- GSV_ERROR_HANDLER MODULE FUNCTIONALITY
+Unique_ID:
+	LLR_001
+Req_Text:
+	The gsv_error_handler module interface shall be as follows:
+		- INPUTS: ERROR_CODE
+		- OUTPUTS: return code different from zero
+Req_Rationale:
+	Module interface, in terms of input and output data, shall be defined.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_002
+Req_Text:
+	The gsv_error_handler module functionality shall be defined by the following algorithm:
+		- Print on screen error message related to input ERROR_CODE
+		- Log the error
+		- Abort execution of application and exit with return code different from '0'
+Req_Rationale:
+	Besides provide feedback to the user, application must return a code different from '0' so the
+	runtime environment can check if it finished successfully or not.
+Notes:
+	See LLR_034 for logging functionality details.
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+------------ SUBTITLE ------------- ERROR_CODE AND MESSAGES
+Unique_ID:
+	LLR_003
+Req_Text:
+	The gsv_error_handler module shall define the following error message format
+	(\n is a NEW LINE char):
+		\n\n
+		*****\n
+		ERROR\n
+		*****\n
+		<Description of the related ERROR_CODE>\n
+		GSV could not be awaken...\n
+		\n
+Req_Rationale:
+	If an operation fails, the application shall provide apropiate feedback to
+	make the user aware of it, giving possible solutions in the description
+	of the error.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_004
+Req_Text:
+	The gsv_error_handler module shall define the following errors
+	(error description in a single line. Blank spaces noted as (b)):
+
+		ERROR_CODE	ERROR_TITLE	ERROR_DESCRIPTION
+		--------------------------------------------------
+		100		INVALID_PAGE_CONTENT	Application could not retrieve content from internet.(b)
+							This may be due to internet connection issues or Wikipedia issues.
+
+		200		INVALID_TEXT_DATA	Application could not obtain a valid english phrase.
+
+		(Any other code
+		or empty code
+		or code 9999)	UNKWNOWN_ERROR		Application finished due to an unknown error.
+
+		--------------------------------------------------
+Req_Rationale:
+	N/A
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+------------ SUBTITLE ------------- ERROR_HANDLER LOG DATA
+Unique_ID:
+	LLR_034
+Req_Text:
+	The gsv_error_handler module shall define the data to be logged as follows:
+		<DATA_ID>:<DATA_VALUE>
+	Where <DATA_ID> is equal to "ERROR", and <DATA_VALUE> is equal to the ERROR_DESCRIPTION of
+	the error being handled.
+
+Req_Rationale:
+	N/A
+Notes:
+	See LLR_027 and LLR_029
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+----------- TITLE -------------- GSV_WEB_SCRAPPER MODULE FUNCTIONALITY
+Unique_ID:
+	LLR_005
+Req_Text:
+	The gsv_web_scrapper module interface shall be as follows:
+		- INPUTS: None
+		- OUTPUTS: text data, only ASCII characters
+Req_Rationale:
+	The module interface shall be defined, in terms of input and output data.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_006
+Req_Text:
+	The gsv_web_scrapper module functionality shall be defined by the following algorithm:
+		- Get VALID text content
+		- Apply further processing methods (if any)
+		- Log data
+		- Return text content
+Req_Rationale:
+	Module operations shall be defined and sorted in a clear, formal way.
+Notes:
+	See LLR_032 for loggind functionality details
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+------------ SUBTITLE ------------- GET VALID TEXT CONTENT
+Unique_ID:
+	LLR_007
+Req_Text:
+	The gsv_web_scrapper module shall get valid text content by:
+		- Request random html page from internet
+		- Encode page into ASCII only text
+		- Extract the text from the html page
+Req_Rationale:
+	N/A
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_008
+Req_Text:
+	The gsv_web_scrapper module shall request random html pages to Wikipedia, performing HTTP GET REQUESTs to
+	the following URL (By random it shall be understood that each request to the specified URL provides a different page):
+		https://en.wikipedia.org/wiki/Special:Random
+Req_Rationale:
+	Wikipedia provides an easy way to obtain random articles, by sending an HTTP GET request to
+	the mentioned URL.
+Notes:
+	As it will be considered in the test, random requests may return the same page more than once.
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_009
+Req_Text:
+	The gsv_web_scrapper shall consider the random page from Wikipedia VALID if the request 
+	fullfills ALL of this requirements:
+		- Request returns a code 200 as a result
+	Otherwise, the page shall be considered NON_VALID.
+Req_Rationale:
+	If an article does not return a 200 code, it means if failed, and even
+	when the HTML can still containing text to be processed, it wont be enough.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_014
+Req_Text:
+	The gsv_web_scrapper module shall encode the page content into ASCII by deleting or replacing ALL NON-ASCII characters on it.
+Req_Rationale:
+	Further operations may fail due to characters that cannot be recognized or processed. To avoid this failures,
+	the text is encoded in all ASCII characters.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_015
+Req_Text:
+	IF the gsv_web_scrapper module is unable to encode the page content into ASCII, then the encoding is
+	considered NON VALID.
+	Otherwise, the encoding is considered VALID.
+Req_Rationale:
+	As a security measure, if the code of the application fails to remove the non-ascii characters from the
+	page text, the application is aborted. This checking and abortion could be executed in later phases of
+	the application, but applying them in this state, time is saved.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_010
+Req_Text:
+	The gsv_web_scrapper shall retrieve, from a valid page, the text contained in the following sections 
+	(considering the HTML structure of the page):
+		- Text in the "divs" of the html wich "class" attribute equal to "mw-content-ltr"
+Req_Rationale:
+	The goal is to obtain the text from the article of the page, instead of the text from the menus, common
+	links (like main page, donation page, etc), image footers and so on. To do so, the HTML is analyzed, chosing
+	the specified tags to be the ones being gathered. This requirement is developed considering a specific
+	HTML structure and after testing several techniques, so it is derived.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	Yes
+
+
+Unique_ID:
+	LLR_011
+Req_Text:
+	The gsv_web_scrapper module shall consider the text data from the html page VALID if it fullfills
+	ALL of these requirements:
+		- It is NOT EMPTY (no content at all)
+	Otherwise, the text data shall be considered NON_VALID.
+Req_Rationale:
+	The text obtained from the page shall contain "meaningfull" text (from a human perspective). Empty strings
+	or random blank characters are not suitable for the goals of the application.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_012
+Req_Text:
+	The gsv_web_scrapper module shall consider the text content VALID if :
+	- The random html page is VALID AND
+	- The ASCII encoding is VALID AND
+	- The text data from the page is VALID too. 
+	Otherwise, the text content shall be considered NON_VALID.
+Req_Rationale:
+	Both conditions shall be fullfilled, otherwise, the natural language processing will be useless.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_013
+Req_Text:
+	The gsv_web_scrapper module shall try to get a VALID text content up to FIVE TIMES.
+	IF one of them is a VALID text content, then the module continues its operations.
+	Otherwise, the module executes the gsv_error_handler module, with input ERROR_CODE=100
+Req_Rationale:
+	Due to internet connection transient errors or strange wikipedia articles, page request or text
+	processing may fail. As a security margin, three attempts are performed. It is considered that,
+	if none of these attempts is successfull, a more severe error is present, and thus, the application
+	shall be aborted.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+------------ SUBTITLE ------------- FURTHER PROCESSING
+Unique_ID:
+	LLR_016
+Req_Text:
+	The gsv_web_scrapper module shall apply the following modifications to the only-ascii text content:
+		- Replace colon characters (";") by dots (".")
+		- Replace double quote characters ("\"") by bots (".")
+		- Replace single quote characters ("\'") by dots (".")
+Req_Rationale:
+	This operations are performed to obtain better results when using TextBlob. 
+	Being TextBlob the NLP library to be used, the text content to be processed is
+	managed in a way that it yields results considered more suitable to the goal of
+	the application. Thus, is a derived requirement.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	Yes
+
+
+------------ SUBTITLE ------------- WEB SCRAPPER LOG DATA
+Unique_ID:
+	LLR_032
+Req_Text:
+	The gsv_web_scrapper module shall define the data to be logged as follows:
+		<DATA_ID>:<DATA_VALUE>
+	Where <DATA_ID> is equal to "RANDOM_URL", and <DATA_VALUE> is equal to the obtained random page from Wikipedia.
+
+Req_Rationale:
+	N/A
+Notes:
+	See LLR_027 and LLR_029
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+------------ SUBTITLE ------------- WEB SCRAPPER FEEDBACK OPERATIONS
+Unique_ID:
+	LLR_037
+Req_Text:
+	The gsv_web_scrapper module shall command the print of ASCII_ART line as follows:
+		- Print line 1 BEFORE any steps of the main algorithm
+		- Print line 2 AFTER getting a VALID text content
+		- Print line 3 AFTER further processing
+		- Print line 4 AFTER log data.
+
+Req_Rationale:
+	The module commands to the gsv_feedback module to print feedback data in the screen
+	in specific steps of its main algorithm, providing the user a way to check if the
+	application still running or it has stopped.
+Notes:
+	See LLR_006 for module algorithm reference. See LLR_035 and LLR_036 for feedback functionality.
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+----------- TITLE -------------- GSV_NLP MODULE FUNCTIONALITY
+Unique_ID:
+	LLR_017
+Req_Text:
+	The gsv_nlp module interface shall be as follows:
+		- INPUTS: text data, only ASCII characters
+		- OUTPUTS: output compliant with UR_001 
+Req_Rationale:
+	The module interface shall be defined, in terms of input and output data.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_018
+Req_Text:
+	The gsv_nlp module functionality shall be defined by the following algorithm:
+		- Choose randomly the output generation method
+		- Generate output using the chosen generation method
+		- Peform post-processing operations on the generated output
+		- Check output compliance with UR_001
+		- Log data
+		- Return output
+Req_Rationale:
+	Module operations shall be defined and sorted in a clear, formal way.
+Notes:
+	See LLR_033 for logging functionality
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+------------ SUBTITLE ------------- CHECK COMPLIANCE
+Unique_ID:
+	LLR_020
+Req_Text:
+	The gsv_nlp module shall consider the output VALID with UR_001 if it meets ALL of this
+	requirements:
+		- Its word lenght is AT LEAST 1 and MAX 5 (blank spaces DOES NOT count as words)
+	Otherwise, the output shall be considered NON_VALID.
+Req_Rationale:
+	See UR_001. Even when the UR_001 defines more conditions, the rest (english phrases,
+	selected randomly) are already fullfilled by other requirements. So, the only one
+	to be tested is the word length.
+Notes:
+	N/A
+Req_Level:
+	Low_leve_requirement
+Is_Derived:
+	No
+
+Unique_ID:
+	LLR_023
+Req_Text:
+	If the gsv_nlp module generates a NON_VALID output, THEN it shall restart its operations from
+	the first instruction in its algorithm.
+Req_Rationale:
+	See LLR_018. If the output is non compliant, then the module shall try to repeat again its main
+	algorithm. Because it is based in Random Number Generation, odds are that different outputs will
+	be generated in successive attempts, being one of them valid.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_024
+Req_Text:
+	The gsv_nlp shall try to obtain a VALID output up to FIVE times. If it obtains a valid output,
+	then the module continues its operation.
+	Otherwise, If the module does not obtain a VALID output in any of these attempts, THEN it shall
+	execute the gsv_error_handler module, with input ERROR_CODE=200.
+Req_Rationale:
+	Text obtained from Wikipedia pages can contain a lot of "typo errors" that can be detected by
+	the used libraries as valid noun phrases, sentences, or verbs. If the text is big enough,
+	chances are that the first attempt to obtain a valid output will fail. To avoid aborting execution
+	at first attempt, a security margin is provided.	
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+------------ SUBTITLE ------------- OUTPUT GENERATION METHODS
+Unique_ID:
+	LLR_019
+Req_Text:
+	The gsv_nlp module shall implement the NOUN_PHRASE generation method,
+	defined by the following algorithm:
+		- Extract ALL noun phrases from the input ascii text
+		- Select randomly one of the noun phrases
+		- Return the selected noun phrase
+Req_Rationale:
+	This requirement defines one possible way to obtain an output from the
+	input text. It is based on the TextBlob library utility "noun_phrases",
+	so its a derived requirement.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	Yes
+
+
+Unique_ID:
+	LLR_021
+Req_Text:
+	The gsv_nlp module shall implement the SENTENCES generation method,
+	defined by the following algorithm:
+		- Extract ALL sentences from the input ascii text
+		- Select randomly one of the sentences
+		- Return the selected sentence
+Req_Rationale:
+	This requirement defines one possible way to obtain an output from the
+	input text. It is based on the TextBlob library utility "sentences",
+	so its a derived requirement.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	Yes
+
+
+Unique_ID:
+	LLR_022
+Req_Text:
+	The gsv_nlp module shall implement the VERB_PLUS_NOUN generation method,
+	defined by the following algorithm:
+		- Extract all verbs in the input text code and store it (each verb appears only once)
+		- Lemmatize all verbs, and store the results.
+		- Extract ALL noun phrases from the input ascii text
+		- Chose randomly a verb lemma
+		- Chose randomly a noun phrase
+		- Concatenate previous two results in the form 
+			<verb_lemma><blank space><noun phrase>
+		- Return concatenation as result
+Req_Rationale:
+	This requirement defines one possible way to obtain an output from the
+	input text. It is based on the TextBlob library utility "lemmatize",
+	and "tags", so its a derived requirement.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	Yes
+
+
+Unique_ID:
+	LLR_030
+Req_Text:
+	If the generation method selected cannot extract any verbs, noun phrases or sentences
+	(depending on the generation method), THEN it shall return an EMPTY word ("").
+Req_Rationale:
+	The function "random.choice()", when applied on an empty collection, raises an exception.
+	To avoid this, it is considered a better solution to return an empty word, that will
+	be latter catch by LLR_020 and LLR_023.
+	This requirement depends on the implementation of the function random.choice, so its derived.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	Yes
+
+
+------------ SUBTITLE ------------- NLP LOG DATA
+Unique_ID:
+	LLR_033
+Req_Text:
+	The gsv_nlp module shall define the data to be logged as follows (each line is a separated line):
+		<DATA_ID_ONE>:<DATA_VALUE>
+		<DATA_ID_TWO>:<DATA_VALUE>
+	Where 
+		- <DATA_ID_ONE> is equal to "GEN_METHOD", and <DATA_VALUE> is equal to the selected generation method.
+		- <DATA_ID_TWO> is equal to "GSVNAME", and <DATA_VALUE> is equal to the generated output
+
+Req_Rationale:
+	N/A
+Notes:
+	See LLR_027 and LLR_029
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+------------ SUBTITLE ------------- NLP FEEDBACK REQUESTS
+Unique_ID:
+	LLR_038
+Req_Text:
+	The gsv_nlp module shall command the print of ASCII_ART line as follows:
+		- Print line 5 BEFORE any step in the algorithm
+		- Print line 6 AFTER check compliance (sucessfully) of output data
+		- Print line 7 BEFORE log data.
+		- Print line 8 AFTER log data.
+
+Req_Rationale:
+	The module commands to the gsv_feedback module to print feedback data in the screen
+	in specific steps of its main algorithm, providing the user a way to check if the
+	application still running or it has stopped.
+Notes:
+	See LLR_018 for module algorithm reference. See LLR_035 and LLR_036 for feedback functionality.
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+------------ SUBTITLE ------------- POST-PROCESSING OPERATIONS
+Unique_ID:
+	LLR_046
+Req_Text:
+	The gsv_nlp module shall perform the following operations on the output generated
+	by the chosen method. The operations shall be performed in this very same ORDER:
+		- Replace ALL NON-ALPHABETIC characters with a white space
+		- Replace all groups of two or more white spaces with only one
+		- Strip leading and trailing white spaces
+		- Capitalize first letter of each word of the output
+		
+Req_Rationale:
+	The generated output can still be non compliant or non-visual attractive due to
+	the presence of punctuation signs, non alphanumeric characters, additional blank spaces
+	or other kind of "disturbances". These ones are deleted in this requirement.
+	
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+----------- TITLE -------------- LOG FUNCTIONALITY
+	NOTE: The log functionality is performed through the Python Logging module. For this reason,
+	logging functionality is not included as a separated module in the application, but as an operation
+	that each module performs, following a specific standard. The standard is defined in this section
+	of the requirements, and is set below a "TITLE" to be easy to find it.
+	
+
+Unique_ID:
+	LLR_027
+Req_Text:
+	The application shall store the following data:
+
+	<DATA_ID>		<DESCRIPTION>
+	-----------------------------------------------
+	RANDOM_URL		Random Wikipedia URL, chosen by gsv_web_scrapper, used to extract the text data
+
+	GEN_METHOD		Generation method used by gsv_nlp to generate the output
+
+	GSVNAME			Output generated by the gsv_nlp module
+
+	ERROR			Any error raised during the execution of the application
+	-----------------------------------------------
+	
+Req_Rationale:
+	Defines the data from the application that shall be logged.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_029
+Req_Text:
+	The application shall save the log data in a text file with the following format:
+	NAME OF THE FILE: <yyyy_mm_dd__hh_mm_ss>_gsvmind_log.txt
+	CONTENT OF THE FILE (each line is a line in the text file, with a NEW LINE as last char):
+		GSVNAME log
+		###########
+		<DATA_ID>:<DATA_VALUE>
+		(...)
+		<ERROR>:<ERROR_DESCRIPTION>
+
+	<DATA_ID> string shall be one of the DATA_ID defined in the LLR_027.
+	
+Req_Rationale:
+	Saving the data in the specified format is both human readable and can be easily parsed
+	by other applications to analyze the data or even reproduce the same execution that generate
+	the log file.
+Notes:
+	See LLR_027 for the allowed DATA_ID strings
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+----------- TITLE -------------- GSV_FEEDBACK MODULE FUNCTIONALITY
+Unique_ID:
+	LLR_035
+Req_Text:
+	The gsv_feedback module shall define the following ASCII_ART message (the [line_n] part
+	are not included in the message):
+
+[ Line_1	] .d8888b.   .d8888b.  888     888               d8b               888
+[ Line_2	]d88P  Y88b d88P  Y88b 888     888               Y8P               888
+[ Line_3	]888    888 Y88b.      888     888                                 888
+[ Line_4	]888         "Y888b.   Y88b   d88P 88888b.d88b.  888 88888b.   .d88888
+[ Line_5	]888  88888     "Y88b.  Y88b d88P  888 "888 "88b 888 888 "88b d88" 888
+[ Line_6	]888    888       "888   Y88o88P   888  888  888 888 888  888 888  888
+[ Line_7	]Y88b  d88P Y88b  d88P    Y888P    888  888  888 888 888  888 Y88b 888
+[ Line_8	] "Y8888P88  "Y8888P"      Y8P     888  888  888 888 888  888  "Y88888
+	
+Req_Rationale:
+	N/A
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_036
+Req_Text:
+	WHEN gsv_feedback module is commanded to print line N, it shall print on screen the line N of the
+	ASCII_ART message.
+
+Req_Rationale:
+	The module acts like a "pasive" module. It is commanded from the other modules to print a specific line
+	of the message in the screen.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+
+Unique_ID:
+	LLR_039
+Req_Text:
+	IF gsv_feedback module is commanded to print a line N WHEN N is out of bounds, THEN
+	if shall print the following line:
+		###
+
+Req_Rationale:
+	A failure in the printing message should not stop the application. In case an index
+	out of bounds is provided to the module (failure in the implementation) or interpreted
+	during execution, the text to be printed shall be different so the error will be discovered
+	during testing phase, but it wont abort the application. This is because a failure in the
+	feedback functionality is not considered critical.
+Notes:
+	N/A
+Req_Level:
+	Low_level_requirement
+Is_Derived:
+	No
+
+####################################################################################
+Unique_ID:
+Req_Text:
+Req_Rationale:
+Notes:
+Req_Level:
+Is_Derived:
+
+Last id used: LLR_046
