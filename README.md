@@ -108,27 +108,7 @@ for a full version of it, or
 
 ### Contributions
 
-<!--- MANY OF THIS ADVICES CAN BE PUT ON THE CONTRIB DIR, INSTEAD ON THE README -->
-Almost all contributions guidelines will contain a section in the wiki, under STANDARDS. It will contain standards about:
-writting issues, adding new source files, moddifying existing ones, adding new requirements, new desings, etc.
-
-clone dir
-create requirements
-then write tests, it shall pass
-then write code, it shall work
-follow the templates and overall code style (tags to reqs, etc)
-try to keep code coverage high, or justify any holes
-start a pull request
-
-open an issue using the available templates
-
-be kind to any person@TODO
-* Writing tests
-* Code review
-* Other guidelines
-* Reference to contrib file
-* Reference to code of conduct
-* Reference to issue template
+GSVmind is open to contributions! [Check the related page at the Wiki of the project](https://github.com/amcajal/gsvmind/wiki/Contributions).
 
 [Back to index](#index)
 
