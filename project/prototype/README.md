@@ -1,6 +1,5 @@
  THIS IS THE README FOR THE PROTOTYPE OF GSVMind PROJECT
 =======================================================
-@TODO
 Here are listed the contents of the /project/prototype folder, and the description of each element.
 
 **bs4_test.py**: This python script contains a simple test using beautifulsoup version 4. It downloads a webpage, and applies the
@@ -16,7 +15,7 @@ library. Several basic operations are performed to test the capabilities of the 
 	in screen the equivalent in python list (that is, turns an ascii art into a python list data type, making it possible
 	to copy and paste it into a python code).
 	- gsvmind_ascii_message.txt: the ascii art message of the application.
-These set of files uses [7] to generate the ascii art.
+These set of files uses [References](https://github.com/amcajal/gsvmind/wiki/References) 7 to generate the ascii art.
 	
 **list_subset.py**: This python script tests how to extract a specific subset from a list of components, and related operations.
 

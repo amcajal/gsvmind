@@ -103,18 +103,27 @@ links found in the project are listed here. When the scope of the reference is s
 <id>20</id>
 <Title>GitHub official webpage</Title>
 <Tags>GitHub, git, hub, official, webpage</Tags>
-<URL>@TODO</URL>
+<URL>https://github.com/</URL>
 
 <id>21</id>
 <Title>Travis CI official webpage</Title>
 <Tags>Travis, CI, continuous, integration, official, webpage</Tags>
-<URL>@TODO</URL>
+<URL>https://travis-ci.org/</URL>
 
 <id>22</id>
-<Title>Draw.io</Title>
+<Title>Draw.io webpage</Title>
 <Tags>Draw, io</Tags>
-<URL>@TODO</URL>
+<URL>https://www.draw.io/</URL>
 
+<id>23</id>
+<Title>GIMP official webpage</Title>
+<Tags>GIMP, gimp, gnu, image, manipulation, program, official, webpage</Tags>
+<URL>https://www.gimp.org/</URL>
+
+<id>24</id>
+<Title>Bitbucket official webpage</Title>
+<Tags>Bitbucket, official, webpage</Tags>
+<URL>https://bitbucket.org/</URL>
 
 <id></id>
 <Title></Title>

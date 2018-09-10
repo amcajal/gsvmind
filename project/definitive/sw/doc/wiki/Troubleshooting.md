@@ -14,9 +14,10 @@ Cause:
 	This is due to the text containing non-ascii characters (like japanese characters).
 
 Solution:
-	Change the encode of the text to another one, like utf-8. Resources [4] has a nice solution to it.
-	Another option (when change encoding does not works) is to remove all non-ascii characters, as shown in [13]
-	Another option to remove the non-ascii characters is shown at [12], under section "Dealing with unicode errors".
+	Change the encode of the text to another one, like utf-8. [Resources](https://github.com/amcajal/gsvmind/wiki/References) 4 has a nice solution to it.
+	Another option (when change encoding does not works) is to remove all non-ascii characters, as shown in 
+    [Resources](https://github.com/amcajal/gsvmind/wiki/References) 13.
+	Another option to remove the non-ascii characters is shown at [Resources](https://github.com/amcajal/gsvmind/wiki/References) 12, under section "Dealing with unicode errors".
 
 References:
-	RESOURCES [4], [12], [13] @TODO
+	[RESOURCES](https://github.com/amcajal/gsvmind/wiki/References) 4, 12 and 13

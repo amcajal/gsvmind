@@ -9,7 +9,7 @@ is the ultimage goal.
 
 Besides, the project has been used as a sandbox to exercise the [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development). 
 Requirements specification is also
-exercised. In fact, both processes are intertwined, as [Contributions](@TODO) chapter shows.
+exercised. In fact, both processes are intertwined, as [Contributions](https://github.com/amcajal/gsvmind/wiki/Contributions) chapter shows.
 
 Finally, this very documentation of the Wiki, the [branching model](https://nvie.com/posts/a-successful-git-branching-model/)
 at GitHub, issue tracker templates and others aspects of the project like

@@ -32,7 +32,7 @@ table, th, td {
         <th>Purpose</th>
             Programming language of choice to develop GSVmind
         <th>Links</th>
-            See [References](@TODO link_to_references), 17
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 17
     </tr>
     <tr>
         <th>Tool</th>
@@ -40,7 +40,7 @@ table, th, td {
         <th>Purpose</th>
             Retrieve HTML content from web pages.
         <th>Links</th>
-            See [References](@TODO link_to_references), 14
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 14
     </tr>
     <tr>
         <th>Tool</th>
@@ -48,7 +48,7 @@ table, th, td {
         <th>Purpose</th>
             Parse HTML files to extract specific data.
         <th>Links</th>
-            See [References](@TODO link_to_references), 1
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 1
     </tr>
     <tr>
         <th>Tool</th>
@@ -56,7 +56,7 @@ table, th, td {
         <th>Purpose</th>
             Perform Natural Language Processing (extract noun phrases, verbs, etc).
         <th>Links</th>
-            See [References](@TODO link_to_references), 10
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 10
     </tr>
     <tr>
         <th>Tool</th>
@@ -64,7 +64,7 @@ table, th, td {
         <th>Purpose</th>
             Perform code coverage of Python code.
         <th>Links</th>
-            See [References](@TODO link_to_references), 16
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 16
     </tr>
     <tr>
         <th>Tool</th>
@@ -72,7 +72,7 @@ table, th, td {
         <th>Purpose</th>
             VCS of choice for the project.
         <th>Links</th>
-            See [References](@TODO link_to_references), 18
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 18
     </tr>
     <tr>
         <th>Tool</th>
@@ -80,7 +80,7 @@ table, th, td {
         <th>Purpose</th>
             Repository hosting service of choice
         <th>Links</th>
-            See [References](@TODO link_to_references), 20
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 20
     </tr>
     <tr>
         <th>Tool</th>
@@ -88,7 +88,7 @@ table, th, td {
         <th>Purpose</th>
             Secondary Repository hosting service (used in the app pre-release)
         <th>Links</th>
-            See [References](@TODO link_to_references), 20
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 24
     </tr>
     <tr>
         <th>Tool</th>
@@ -96,7 +96,7 @@ table, th, td {
         <th>Purpose</th>
             Continous Integration framework of choice
         <th>Links</th>
-            See [References](@TODO link_to_references), 21
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 21
     </tr>
     <tr>
         <th>Tool</th>
@@ -104,9 +104,14 @@ table, th, td {
         <th>Purpose</th>
             Generation of UML diagrams, block diagrams, and othe visual representations.
         <th>Links</th>
-            See [References](@TODO link_to_references), 22
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 22
+    </tr>
+    <tr>
+        <th>Tool</th>
+            GIMP
+        <th>Purpose</th>
+            Graphic design of project logo.
+        <th>Links</th>
+            See [References](https://github.com/amcajal/gsvmind/wiki/References), 23
     </tr>
 </table>
-
-
-- Draw.io
