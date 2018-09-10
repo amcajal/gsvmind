@@ -6,7 +6,6 @@ purposes, but they shall not be used as reference for the current application st
 is located under project/def folder.
 
 ****
-@TODO
 To use BeautifulSoup, first we need to download the library. [1] Contains all required information. We executed
 	$ sudo apt-get install bs-4
 Now we are ready to use it. To download the HTML of the pages, nothing more shall be installed. [2] is a very good tutorial

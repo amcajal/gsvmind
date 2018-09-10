@@ -93,7 +93,6 @@ Req_Rationale:
 	Either for debugging process or repeat capabilities, its a good idea to keep (and save) a log containing
 	all critical steps or configurations parameters.
 Notes:
-	Further requirements will determine what data must be stored in the log. @TODO
 	See UR_001
 Req_Level:
 	High_level_requirement
