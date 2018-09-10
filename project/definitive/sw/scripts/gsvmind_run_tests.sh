@@ -60,7 +60,7 @@ CURRENT_DIR=$(pwd)
 ################################################################################
 print_info_message "GSVmind RUN TEST SCRIPT..."
 
-cd ../dev/test
+cd ../dev/testing
 
 for gsv_test_file in $(find ./ -regex ^\./tests.*\.py$); 
 do 
