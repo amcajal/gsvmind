@@ -1,4 +1,7 @@
 *.pyc
 *_gsvmind_log.txt
+project/definitive/sw/dev/testing/.coverage
+project/definitive/sw/dev/testing/coverage_results
+project/definitive/sw/dev/testing/*.txt
 
 !requirements.txt
