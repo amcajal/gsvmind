@@ -5,6 +5,8 @@ This page contains the notes generated during the application development. The n
 purposes, but they shall not be used as reference for the current application status (functionality, structure, etc). Such information
 is located under project/def folder.
 
+A number between brackets represents a reference to the [Resources](https://github.com/amcajal/gsvmind/wiki/References) page in the Wiki.
+For example, [4] representes the entry with ID 4 at Resources page.
 ****
 To use BeautifulSoup, first we need to download the library. [1] Contains all required information. We executed
 	$ sudo apt-get install bs-4

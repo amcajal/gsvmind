@@ -33,8 +33,8 @@ GEN_METHOD:SENTENCES
 GSVNAME:Skaffen-Amtiskaw the best
 ```
 
-The whole application functionality is specified in the requirements.txt document, found under project/def/sw/req. 
-The applications entry point is "gsvmind.py", found under project/def/sw/src, which is a perfect place to start div into the
+The whole application functionality is specified in the requirements.txt document, found under *project/def/sw/req*. 
+The applications entry point is "gsvmind.py", found under *project/def/sw/src*, which is a perfect place to start div into the
 code and how the application is implemented.
 
 A core aspect of the application is the Python language. GSVmind is implemented in Python, 
@@ -42,5 +42,5 @@ either custom code or using several libraries, like Requests, BeautifulSoup
 and TextBlob. The matching between the Python code and the modules is shown in the following diagram:
 ![gsv_mapping_tech](https://github.com/amcajal/gsvmind/blob/master/project/definitive/sw/doc/media/GSVMind_design-GSVmind_tech_mapping_diagram.png)
 
-Finally, the project is "fully" tested with a suit of tests found under project/def/sw/test.
+Finally, the project is "fully" tested with a suit of tests found under *project/def/sw/test*.
 
