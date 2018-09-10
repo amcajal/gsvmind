@@ -30,7 +30,7 @@ as P.P.P) has been tried or exercised as a learning process. Some of them are:
 - Code Coverage
 - Clean Code (readability, modularity, meaningfull comments...)
 
-More information at the [Wiki of the project](@TODO).
+More information at the [Wiki of the project](https://github.com/amcajal/gsvmind/wiki).
 
 ---
 
