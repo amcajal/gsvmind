@@ -1,0 +1,4 @@
+*.pyc
+*_gsvmind_log.txt
+
+!requirements.txt
