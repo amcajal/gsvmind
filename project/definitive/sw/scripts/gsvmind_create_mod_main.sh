@@ -58,10 +58,10 @@ print_success_message()
 	echo "##############################"
 }
 
-SRC_DIR=./src
+SRC_DIR=../dev/src
 MAIN_FILE=gsvmind.py
 CURRENT_DIR=$(pwd)
-ROOT_DIR=../
+ROOT_DIR=../../../../
 ################################################################################
 cd $ROOT_DIR
 rm $MAIN_FILE # Delete previous files with same name 

@@ -61,7 +61,7 @@ print_success_message()
 }
 
 CURRENT_DIR=$(pwd)
-SCRIPTS_DIR=./scripts
+SCRIPTS_DIR=./project/definitive/sw/scripts/
 ################################################################################
 print_info_message "GSVmind SETUP SCRIPT..."
 
@@ -79,7 +79,7 @@ fi
 print_info_message "Running tests..."
 sh ./gsvmind_run_tests.sh
 if [ $? -ne 0 ]; then
-	print_error_message "sh ./tests/gsvmind_run_tests.sh"
+	print_error_message "sh gsvmind_run_tests.sh"
 	exit 1
 fi
 

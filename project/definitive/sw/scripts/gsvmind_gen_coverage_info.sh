@@ -63,11 +63,11 @@ print_success_message()
 }
 
 CURRENT_DIR=$(pwd)
-SOURCE_DIR=../src
+SOURCE_DIR=../dev/src
 ################################################################################
 print_info_message "GSVmind COVERAGE DATA GENERATION script..."
 
-cd ../test
+cd ../dev/test
 
 # Delete all previous coverage data
 coverage erase 
