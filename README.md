@@ -63,7 +63,7 @@ run _gsvmind_install_dep.sh_:
 
     `$ python gsvmind.py`
     
-Example output:
+Output is generated (it takes between 30 sec to 1 min to be complete) as follows:
 ```
  .d8888b.   .d8888b.  888     888               d8b               888
 d88P  Y88b d88P  Y88b 888     888               Y8P               888
