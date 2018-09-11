@@ -1,7 +1,7 @@
 ![project_logo](https://github.com/amcajal/gsvmind/blob/master/project/definitive/sw/doc/media/gsvmind_logo.png)
 
 [![Build Status](@TODO)
-[![Coverage]()]()
+[![Coverage](@TODO)
 [![GitHub license](https://img.shields.io/github/license/amcajal/gsvmind.svg)](https://github.com/amcajal/gsvmind/blob/master/LICENSE)
 
 
@@ -23,7 +23,7 @@ required to generate the random names - specifically from [Wikipedia, through it
 (Kindly consider [donate](https://donate.wikimedia.org/wiki/Ways_to_Give?rdfrom=%2F%2Ffoundation.wikimedia.org%2Fw%2Findex.php%3Ftitle%3DWays_to_Give%2Fen%26redirect%3Dno)
  to one of the best websites in the world).
 
-Besides its funny purpose, GSVmind is an state-of-the-art/sandbox project, where several Principles, Patters and Principles (also known
+Besides its funny purpose, GSVmind is an state-of-the-art/sandbox project, where several Principles, Patters and Practices (also known
 as P.P.P) has been tried or exercised as a learning process. Some of them are: 
 - Test Driven Development
 - Requirements Development
