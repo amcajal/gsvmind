@@ -40,6 +40,10 @@ import unittest
 import os
 import sys
 import subprocess
+import sys
+sys.path.append('../')
+
+from src import gsvmind
 
 ################################################################################
 # Utility functions: These functions contains functionality required to perform
@@ -49,7 +53,7 @@ import subprocess
 
 ################################################################################
 
-class TestGSVmind(unittest.TestCase):
+class TestGSVmind(unittest.TestCase):		
 	'''
 	Tested requirements:
 		(All tests, but more directly):
@@ -133,6 +137,54 @@ class TestGSVmind(unittest.TestCase):
 			ret_value = subprocess.call(f)
 			self.assertTrue(ret_value != 0, "Application should fail, but exit with code 0 while launching:" + str(f))
 			
+			
+	'''
+	Tested requirements:
+		Same as test_gsvmind test
+	Description:
+		This test pursues the same goal than "test_gsvmind" test. Its
+		only difference is that it is specially designed to allow
+		coverage.py to generate coverage data of the main file of GSVmind.
+	Preconditions:
+		Same as test_gsvmind
+	Input:
+		Same as test_gsvmind
+	Procedure:
+		Same as test_gsvmind
+	Output:
+		Same as test_gsvmind
+	Postconditions:
+		Same as test_gsvmind
+	Expected results:
+		Same as test_gsvmind
+	Errors:
+		Same as test_gsvmind
+	Side effects:
+		Same as test_gsvmind
+	Notes:
+		Same as test_gsvmind
+	'''
+	def test_gsvmind_coverage(self):
+		valid_input_args = [	
+							["-v"], # version_arg
+							["-h"], # help_arg
+							[] # Normal execution (no input args)
+							]
+		
+		wrong_input_args = [["-j"]]
+										
+		for ia in valid_input_args:		
+			try:
+				gsvmind.main(ia)
+			except SystemExit as se:
+				self.assertTrue(se.code == 0, "Application returned non-zero value with input arg: " + str(ia))
+				
+		for ia in wrong_input_args:		
+			try:
+				gsvmind.main(ia)
+			except SystemExit as se:
+				self.assertTrue(se.code == 2, "Application returned zero value with input arg: " + str(ia))
+
 		
 ################################################################################
 
