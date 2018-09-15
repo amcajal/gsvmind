@@ -14,9 +14,12 @@ of the more professional [definition of tool provided in The Jargon File](http:/
 	  For example: text editors (Leafpad), IDEs (Geany), web browsers (Epiphany)_
 
 **Software**
+   
 <style>
 table, th, td {
     border: 1px solid black;
+    text-align: left;
+    padding: 8px;
 }
 </style>
 
@@ -27,91 +30,58 @@ table, th, td {
         <th>Links</th>
     </tr>
     <tr>
-        <th>Tool</th>
-            Python 2.7
-        <th>Purpose</th>
-            Programming language of choice to develop GSVmind
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 17
+        <td>Python 2.7</td>
+        <td>Programming language of choice to develop GSVmind</td>
+        <td> See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 17 </td>
     </tr>
     <tr>
-        <th>Tool</th>
-            Requests Python Library
-        <th>Purpose</th>
-            Retrieve HTML content from web pages.
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 14
+        <td>Requests Python Library</td>
+        <td>Retrieve HTML content from web pages.</td> 
+        <td>See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 14</td>
     </tr>
     <tr>
-        <th>Tool</th>
-            BeautifulSoup Python library
-        <th>Purpose</th>
-            Parse HTML files to extract specific data.
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 1
+        <td>BeautifulSoup Python library</td> 
+        <td>Parse HTML files to extract specific data.</td> 
+        <td>See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 1</td>    
     </tr>
     <tr>
-        <th>Tool</th>
-            TextBlob Python library
-        <th>Purpose</th>
-            Perform Natural Language Processing (extract noun phrases, verbs, etc).
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 10
+        <td>TextBlob Python library</td>  
+        <td>Perform Natural Language Processing (extract noun phrases, verbs, etc).</td>  
+        <td>See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 10</td>   
     </tr>
     <tr>
-        <th>Tool</th>
-            Coverage.py
-        <th>Purpose</th>
-            Perform code coverage of Python code.
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 16
+        <td>Coverage.py</td> 
+        <td>Perform code coverage of Python code.</td>
+        <td>See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 16</td>   
     </tr>
     <tr>
-        <th>Tool</th>
-            Git
-        <th>Purpose</th>
-            VCS of choice for the project.
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 18
+        <td>Git</td> 
+        <td>VCS of choice for the project.</td>  
+        <td>See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 18</td>
     </tr>
     <tr>
-        <th>Tool</th>
-            GitHub
-        <th>Purpose</th>
-            Repository hosting service of choice
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 20
+        <td>GitHub</td>
+        <td>Repository hosting service of choice</td>
+        <td>See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 20</td>  
     </tr>
     <tr>
-        <th>Tool</th>
-            Bitbucket
-        <th>Purpose</th>
-            Secondary Repository hosting service (used in the app pre-release)
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 24
+        <td>Bitbucket</td>
+        <td>Secondary Repository hosting service (used in the app pre-release)</td>
+        <td>See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 24</td>    
     </tr>
     <tr>
-        <th>Tool</th>
-            Travis CI
-        <th>Purpose</th>
-            Continous Integration framework of choice
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 21
+        <td>Travis CI</td>  
+        <td>Continous Integration framework of choice</td>
+        <td>See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 21</td>    
     </tr>
     <tr>
-        <th>Tool</th>
-            Draw.io
-        <th>Purpose</th>
-            Generation of UML diagrams, block diagrams, and othe visual representations.
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 22
+        <td>Draw.io</td> 
+        <td>Generation of UML diagrams, block diagrams, and othe visual representations.</td> 
+        <td>See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 22</td>   
     </tr>
     <tr>
-        <th>Tool</th>
-            GIMP
-        <th>Purpose</th>
-            Graphic design of project logo.
-        <th>Links</th>
-            See [References](https://github.com/amcajal/gsvmind/wiki/References), 23
+        <td>GIMP</td>
+        <td>Graphic design of project logo.</td> 
+        <td>See <a href="https://github.com/amcajal/gsvmind/wiki/References">References</a>, 23</td> 
     </tr>
 </table>

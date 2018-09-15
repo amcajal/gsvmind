@@ -2,7 +2,7 @@ CONTRIBUTIONS
 =============
 GSVmind is open to any kind of contributions, from fixes to new features, including requests.
 
-To do so, open an issue in the Issue Tracker of the project. Remember to be polite (otherwise, it will be deleted),
+To do so, open an issue in the [Issue Tracker](https://github.com/amcajal/gsvmind/issues) of the project. Remember to be polite (otherwise, it will be deleted),
 and provide enough information. More details the better!
 
 Given the scope of the project, certain degree of
