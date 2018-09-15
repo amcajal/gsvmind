@@ -34,13 +34,13 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
+import sys
 import datetime
 import logging
 import argparse
 import gsv_web_scrapper
 import gsv_nlp
-	
-parsed_arguments = "" #Argument parser
+
 
 ################################################################################
 
@@ -59,8 +59,7 @@ def print_version_message():
 	print "\n"
 
 
-def parse_arguments():
-	global parsed_arguments
+def parse_arguments(args):
 	parser = argparse.ArgumentParser(
 		description='Generate random GSV names (like the ones from Culture series of Ian M Banks!)',
 		epilog="Example: $ python gsvmind.py")
@@ -69,11 +68,11 @@ def parse_arguments():
 		action='store_true', 
 		default='store_false',
 		help='Print version information and exit')
-	parsed_arguments = parser.parse_args()
-
-
-def check_arguments():
-	global parsed_arguments
+	parsed_arguments = parser.parse_args(args)
+	return parsed_arguments
+    
+    
+def check_arguments(parsed_arguments):
 	if parsed_arguments.version == True:
 		print_version_message()
 		exit(0)
@@ -86,10 +85,10 @@ def configure_log():
 	logging.basicConfig(filename=log_name,level=logging.INFO,format='%(message)s')
 
 
-def main():
+def main(args):
 	# As defined by LLR_043
-	parse_arguments()
-	check_arguments()
+	parsed_arguments = parse_arguments(args)
+	check_arguments(parsed_arguments)
 	
 	# As defined by LLR_045
 	configure_log()
@@ -106,5 +105,5 @@ def main():
 	
 	
 if __name__ == "__main__":
-	main()
+	main(sys.argv[1:])
 	exit(0)

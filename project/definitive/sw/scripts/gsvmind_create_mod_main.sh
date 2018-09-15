@@ -66,7 +66,7 @@ ROOT_DIR=../../../../
 cd $ROOT_DIR
 rm $MAIN_FILE # Delete previous files with same name 
 cp $SRC_DIR/$MAIN_FILE ./
-sed -i 's/import gsv_web_scrapper/import sys\nsys.path.append(".\/project\/definitive\/sw\/dev")\nfrom src import gsv_web_scrapper/' $MAIN_FILE
+sed -i 's/import gsv_web_scrapper/sys.path.append(".\/project\/definitive\/sw\/dev")\nfrom src import gsv_web_scrapper/' $MAIN_FILE
 sed -i 's/import gsv_nlp/from src import gsv_nlp/' $MAIN_FILE
 python $MAIN_FILE -v
 if [ $? -ne 0 ]; then
