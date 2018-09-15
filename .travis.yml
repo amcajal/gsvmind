@@ -39,6 +39,7 @@ python:
   
 install:
   - pip install -r ./project/definitive/sw/scripts/pip_requirements.txt
+  - python -m textblob.download_corpora
   
 script:
   - sh ./setup.sh
