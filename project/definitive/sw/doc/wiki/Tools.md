@@ -13,6 +13,8 @@ of the more professional [definition of tool provided in The Jargon File](http:/
     -    _GNU binutils and other basic software already included in the Raspbian OS is not listed here.
 	  For example: text editors (Leafpad), IDEs (Geany), web browsers (Epiphany)_
 
+    _Note_: The Raspberry Pi decided to name itself "August".
+
 **Software**
    
 <style>
