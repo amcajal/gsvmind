@@ -59,7 +59,7 @@ run _gsvmind_install_dep.sh_:
     
     `$ sudo sh gsvmind_install_dep.sh`
     
-* If _setup.sh_ finished sucessfully, you can launch now GSVmind!:
+* If _setup.sh_ finished sucessfully, you can launch now GSVmind from the root directory!:
 
     `$ python gsvmind.py`
     
