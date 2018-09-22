@@ -64,6 +64,7 @@ print_success_message()
 
 CURRENT_DIR=$(pwd)
 SOURCE_DIR=../src
+ROOT_DIR=../../../../../
 ################################################################################
 print_info_message "GSVmind COVERAGE DATA GENERATION script..."
 
@@ -89,6 +90,22 @@ if [ $? -ne 0 ]; then
 	print_error_message "coverage html -d ./coverage_results"
 	exit 1
 fi
+
+print_info_message "Updating README coverage badge..."
+
+TOTAL_COVERAGE=$(cat ./coverage_results/index.html | grep pc_cov | sed s'/\s*//' | sed s'/\%.*//' | cut -c 22-)
+if [ $TOTAL_COVERAGE -lt 50 ]; then
+	COLOR=red
+elif [ $TOTAL_COVERAGE -lt 80 ]; then
+	COLOR=yellow
+elif [ $TOTAL_COVERAGE -lt 101 ]; then
+	COLOR=brightgreen
+fi
+
+COVERAGE_LINE="[![Coverage](https://img.shields.io/badge/Coverage-$TOTAL_COVERAGE%-$COLOR.svg)"
+cd $ROOT_DIR
+sed -i s"|\[\!\[Coverage\].*|$COVERAGE_LINE|" ./README.md
+
 ################################################################################
 cd $CURRENT_DIR
 print_success_message
