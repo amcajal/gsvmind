@@ -1,7 +1,7 @@
 ![project_logo](https://github.com/amcajal/gsvmind/blob/master/project/definitive/sw/doc/media/gsvmind_logo.png)
 
 [![Build Status](https://travis-ci.org/amcajal/gsvmind.svg?branch=master)](https://travis-ci.org/amcajal/gsvmind)
-[![Coverage](@TODO)
+[![Coverage]()
 [![GitHub license](https://img.shields.io/github/license/amcajal/gsvmind.svg)](https://github.com/amcajal/gsvmind/blob/master/LICENSE)
 
 
