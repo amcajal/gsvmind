@@ -102,9 +102,9 @@ elif [ $TOTAL_COVERAGE -lt 101 ]; then
 	COLOR=brightgreen
 fi
 
-COVERAGE_LINE="[![Coverage](https://img.shields.io/badge/Coverage-$TOTAL_COVERAGE%-$COLOR.svg)"
+COVERAGE_LINE="![Coverage](https://img.shields.io/badge/Coverage-$TOTAL_COVERAGE%25-$COLOR.svg)"
 cd $ROOT_DIR
-sed -i s"|\[\!\[Coverage\].*|$COVERAGE_LINE|" ./README.md
+sed -i s"|\!\[Coverage\].*|$COVERAGE_LINE|" ./README.md
 
 ################################################################################
 cd $CURRENT_DIR
